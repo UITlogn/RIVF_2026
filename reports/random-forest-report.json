@@ -1,0 +1,179 @@
+{
+  "claim_guard": "Random Forest was added after inspection of the frozen v5 result. It is a robustness check, not a preregistered primary or confirmatory result.",
+  "created_at": "2026-09-14T04:51:23.863626+00:00",
+  "features": {
+    "binary": [
+      "observed_whoami",
+      "observed_hostname",
+      "observed_ipconfig",
+      "observed_tasklist"
+    ],
+    "categorical": [
+      "operation",
+      "launcher_type",
+      "account_role"
+    ]
+  },
+  "inputs": {
+    "logistic_predictions": {
+      "path": "output\\context-study\\runs\\rivf-context-dual-context-v5-measured-final\\predictions.csv",
+      "sha256": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2"
+    },
+    "v5_dataset": {
+      "path": "context_research\\artifacts\\dual-context-v5\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e"
+    },
+    "v6_dataset": {
+      "path": "context_research\\artifacts\\temporal-replication-v6\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "3916383216b654f31d6c5f66f3ef14190c6d76b841141a1a8b677118391c7899"
+    }
+  },
+  "model": {
+    "algorithm": "sklearn.ensemble.RandomForestClassifier",
+    "parameters": {
+      "class_weight": "balanced_subsample",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "n_estimators": 1000,
+      "n_jobs": 1,
+      "random_state": 20260914
+    }
+  },
+  "no_v6_retraining": true,
+  "results": {
+    "development": {
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "auc": 0.8888888888888888,
+        "fn": 8,
+        "fp": 0,
+        "fpr": 0.0,
+        "mcc": 0.7071067811865476,
+        "precision": 1.0,
+        "tn": 24,
+        "tp": 16,
+        "tpr": 0.6666666666666666
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.8333333333333334,
+        "losses": 0,
+        "pairs": 24,
+        "ties": 8,
+        "wins": 16
+      }
+    },
+    "test": {
+      "compromised_admin_audit": {
+        "account_state_label": "compromised",
+        "attack_records": 12,
+        "detected": 4,
+        "detection_rate": 0.3333333333333333
+      },
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "auc": 0.8888888888888888,
+        "fn": 8,
+        "fp": 0,
+        "fpr": 0.0,
+        "mcc": 0.7071067811865476,
+        "precision": 1.0,
+        "tn": 24,
+        "tp": 16,
+        "tpr": 0.6666666666666666
+      },
+      "other_attack_audit": {
+        "account_state_label": "not_applicable",
+        "attack_records": 12,
+        "detected": 12,
+        "detection_rate": 1.0
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.8333333333333334,
+        "losses": 0,
+        "pairs": 24,
+        "ties": 8,
+        "wins": 16
+      }
+    },
+    "v6_locked": {
+      "compromised_admin_audit": {
+        "account_state_label": "compromised",
+        "attack_records": 12,
+        "detected": 4,
+        "detection_rate": 0.3333333333333333
+      },
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "auc": 0.8888888888888888,
+        "fn": 8,
+        "fp": 0,
+        "fpr": 0.0,
+        "mcc": 0.7071067811865476,
+        "precision": 1.0,
+        "tn": 24,
+        "tp": 16,
+        "tpr": 0.6666666666666666
+      },
+      "other_attack_audit": {
+        "account_state_label": "not_applicable",
+        "attack_records": 12,
+        "detected": 12,
+        "detection_rate": 1.0
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.8333333333333334,
+        "losses": 0,
+        "pairs": 24,
+        "ties": 8,
+        "wins": 16
+      }
+    },
+    "validation": {
+      "metrics": {
+        "accuracy": 0.8333333333333334,
+        "auc": 0.8888888888888888,
+        "fn": 8,
+        "fp": 0,
+        "fpr": 0.0,
+        "mcc": 0.7071067811865476,
+        "precision": 1.0,
+        "tn": 24,
+        "tp": 16,
+        "tpr": 0.6666666666666666
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.8333333333333334,
+        "losses": 0,
+        "pairs": 24,
+        "ties": 8,
+        "wins": 16
+      }
+    }
+  },
+  "schema_version": "rivf-posthoc-random-forest-robustness-v1",
+  "selection": {
+    "fit_split": "v5 development only",
+    "maximum_validation_fpr": 0.05,
+    "selected_threshold": 0.7366094268901707,
+    "threshold_split": "v5 validation only",
+    "validation_metrics": {
+      "accuracy": 0.8333333333333334,
+      "auc": 0.8888888888888888,
+      "fn": 8,
+      "fp": 0,
+      "fpr": 0.0,
+      "mcc": 0.7071067811865476,
+      "precision": 1.0,
+      "tn": 24,
+      "tp": 16,
+      "tpr": 0.6666666666666666
+    }
+  },
+  "software": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.9.1"
+  },
+  "status": "posthoc_exploratory_after_v5_test_opened"
+}

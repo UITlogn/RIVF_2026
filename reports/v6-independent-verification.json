@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "confusion_auc_pair_ranking_subgroups": true,
+    "freeze_hashes": 28,
+    "no_retraining": true,
+    "wilson_discordance_sign_test_bootstrap": true
+  },
+  "created_at": "2026-09-14T03:40:06.571354+00:00",
+  "dataset": {
+    "by_label": {
+      "attack_preparation": 24,
+      "legitimate_admin": 24
+    },
+    "by_operation": {
+      "backup_delete": 12,
+      "event_log_clear": 12,
+      "service_disable": 12,
+      "shadow_copy_delete": 12
+    },
+    "pairs": 24,
+    "records": 48
+  },
+  "errors": [],
+  "identities": {
+    "claim_dataset_sha256": "3916383216b654f31d6c5f66f3ef14190c6d76b841141a1a8b677118391c7899",
+    "locked_model_artifacts_sha256": "b7c198bd01113e3226b3efbb43535199beff654928c5b8f38153fa152fd58cd7",
+    "manifest_sha256": "9192e5729f837b60a02033144d881c69c27fd139994b8e36905772e803e11250",
+    "model_report_sha256": "62f69e65e470ecd059120514c9a3556c559de99d5daa7a958ecd977a3f1b585f",
+    "predictions_sha256": "c8bbb3fa53f44ede88c1dd55cd5371b4b7c4bd885faa3bf5514fbdb097c56b26",
+    "uncertainty_sha256": "b93ee967fbe571fd526af44ab06c0b9dd42cb0dd4133499075f1a9276a942d61"
+  },
+  "method": "independent Python standard-library recomputation from frozen inputs, raw checksums, and exported scores",
+  "models_verified": [
+    "measured_process_context",
+    "operation_only"
+  ],
+  "raw_artifacts": {
+    "checksum_entries_verified": 3696,
+    "invalid_json_records": 0,
+    "runs": 48,
+    "valid_procmon_records": 33529
+  },
+  "schema_version": "rivf-locked-replication-independent-verification-v1",
+  "status": "pass"
+}

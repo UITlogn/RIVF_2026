@@ -1,0 +1,254 @@
+{
+  "created_at": "2026-09-14T09:36:25.722365+00:00",
+  "files": [
+    {
+      "bytes": 4641,
+      "path": "README.md",
+      "sha256": "d23ed75917c6dfd57dc2c08b5e2554015ff914ef953bdb105e698fd92cfa0543",
+      "source": "context_research/reviewer_artifact/README.md"
+    },
+    {
+      "bytes": 162764,
+      "path": "data/complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e",
+      "source": "context_research/artifacts/dual-context-v5/final/complete-pairs-measured-claim-v2.jsonl"
+    },
+    {
+      "bytes": 93353,
+      "path": "scores/v5-logistic-predictions.csv",
+      "sha256": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2",
+      "source": "output/context-study/runs/rivf-context-dual-context-v5-measured-final/predictions.csv"
+    },
+    {
+      "bytes": 14850,
+      "path": "scores/v6-locked-predictions.csv",
+      "sha256": "c8bbb3fa53f44ede88c1dd55cd5371b4b7c4bd885faa3bf5514fbdb097c56b26",
+      "source": "output/context-study/runs/rivf-context-temporal-replication-v6-locked-final/predictions.csv"
+    },
+    {
+      "bytes": 25580,
+      "path": "scores/random-forest-predictions.csv",
+      "sha256": "157778d31f1e83efee51fc8f2faa202c82861d2ef3ce9af71175c8cb40543e95",
+      "source": "output/context-study/runs/rivf-context-posthoc-rf-robustness-v1/random-forest-predictions.csv"
+    },
+    {
+      "bytes": 12309,
+      "path": "evidence/heldout-scores.csv",
+      "sha256": "36d29c554f13f0e5e8997bd2ae37a1f24ed1535f57ae11598a6ac6acf8c2da2e",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/heldout-scores.csv"
+    },
+    {
+      "bytes": 840,
+      "path": "evidence/ablation-table.csv",
+      "sha256": "f7c2e207ccf6e7b6ef94d68ff8a64586965f20d930380ce243bca147d2283ed9",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/ablation-table.csv"
+    },
+    {
+      "bytes": 1232,
+      "path": "evidence/exact-collision-pairs.csv",
+      "sha256": "bc2fe68b46aa7e6717dd0474d7c6884848198cd027e2b32394c2820d7d4fa4dd",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/exact-collision-pairs.csv"
+    },
+    {
+      "bytes": 1741,
+      "path": "evidence/compromised-admin-pair-audit.csv",
+      "sha256": "107c7cf9d9e34b3a4a7fca10e8267abb5c3de799778b387734a5157e86a6943f",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/compromised-admin-pair-audit.csv"
+    },
+    {
+      "bytes": 2528,
+      "path": "evidence/roc-points.csv",
+      "sha256": "037e898d25bc6f4879ee2f2a8cf62c47a80ae027bf27ff4f3e14f7210f73ea41",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/roc-points.csv"
+    },
+    {
+      "bytes": 6032,
+      "path": "evidence/paper-evidence-report.json",
+      "sha256": "5fbb7249de463e3fb7651e63ef2e16e4a4b9ade001434a33a551735b327b0e0d",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/paper-evidence-report.json"
+    },
+    {
+      "bytes": 98332,
+      "path": "evidence/model-diagnostics.png",
+      "sha256": "8455978c92ee4f7bcc935c5991821d800bd8a23e61601eb97ad19655a1fb6ecb",
+      "source": "output/context-study/runs/rivf-paper-evidence-v3/model-diagnostics.png"
+    },
+    {
+      "bytes": 11607,
+      "path": "reports/v5-model-report.json",
+      "sha256": "36b9c3b15776538ee9e9a3a1aca8030ce3e48bb61a62f163f7d4057591b81f1a",
+      "source": "output/context-study/runs/rivf-context-dual-context-v5-measured-final/model-report.json"
+    },
+    {
+      "bytes": 8767,
+      "path": "reports/v5-model-artifacts.json",
+      "sha256": "b7c198bd01113e3226b3efbb43535199beff654928c5b8f38153fa152fd58cd7",
+      "source": "output/context-study/runs/rivf-context-dual-context-v5-measured-final/model-artifacts.json"
+    },
+    {
+      "bytes": 12571,
+      "path": "reports/v5-uncertainty.json",
+      "sha256": "d2cdf70b9f54b4fd9e05181560cd5e0aa58ec11eecf11f00a053adc9e4179aac",
+      "source": "output/context-study/runs/rivf-context-dual-context-v5-measured-final/uncertainty.json"
+    },
+    {
+      "bytes": 7335,
+      "path": "reports/v5-observability-audit.json",
+      "sha256": "8afd9d740fb3925e1d73f6d3c2481462bb6560aef260595017ca81de6ad8065e",
+      "source": "context_research/artifacts/dual-context-v5/final/measured-v2-observability-audit.json"
+    },
+    {
+      "bytes": 3627,
+      "path": "reports/v5-lineage-audit.json",
+      "sha256": "db5f2a9055c825b8cb54c66fcb74c091c43feb5256876d073436dd53e7a4ff85",
+      "source": "context_research/artifacts/dual-context-v5/final/source-v1-lineage-audit.json"
+    },
+    {
+      "bytes": 4963,
+      "path": "reports/v5-independent-verification.json",
+      "sha256": "479e78b933ff68530a0919bf0c015feca1df0113fea4c1889e97bf87072cf320",
+      "source": "context_research/artifacts/dual-context-v5/final/independent-result-verification.json"
+    },
+    {
+      "bytes": 2909,
+      "path": "reports/v6-model-report.json",
+      "sha256": "62f69e65e470ecd059120514c9a3556c559de99d5daa7a958ecd977a3f1b585f",
+      "source": "output/context-study/runs/rivf-context-temporal-replication-v6-locked-final/model-report.json"
+    },
+    {
+      "bytes": 6864,
+      "path": "reports/v6-uncertainty.json",
+      "sha256": "b93ee967fbe571fd526af44ab06c0b9dd42cb0dd4133499075f1a9276a942d61",
+      "source": "output/context-study/runs/rivf-context-temporal-replication-v6-locked-final/uncertainty.json"
+    },
+    {
+      "bytes": 1614,
+      "path": "reports/v6-independent-verification.json",
+      "sha256": "983df1195ed30ef458f05012d4a0a42af34295b80bba650240837c9be2e59645",
+      "source": "context_research/artifacts/temporal-replication-v6/final/independent-result-verification-final-paper.json"
+    },
+    {
+      "bytes": 5053,
+      "path": "reports/random-forest-report.json",
+      "sha256": "87b2eb267c0007a03b39ca0f337c998438cf8fcd9f5d80f27a8fdc191f35a31d",
+      "source": "output/context-study/runs/rivf-context-posthoc-rf-robustness-v1/random-forest-report.json"
+    },
+    {
+      "bytes": 2286,
+      "path": "reports/operation-mapping-control-report.json",
+      "sha256": "c3f13be01d49a0806242331207eddbcd9498c673a140497fd25f894a65e3f24a",
+      "source": "output/context-study/runs/rivf-context-posthoc-attack-rule-v1/attack-rule-report.json"
+    },
+    {
+      "bytes": 32075,
+      "path": "config/dual-context-campaign-v5.json",
+      "sha256": "3fd9481b6fa5bb2226456fe5b0935712709eecde84755303f8c2f5600b409bc8",
+      "source": "context_research/config/dual-context-campaign-v5.json"
+    },
+    {
+      "bytes": 3516,
+      "path": "config/experiment-v2-measured.json",
+      "sha256": "d6fbb1d20af89c87d1f003cb17345118fae02da3f9469bf6a77c64e6fba37635",
+      "source": "context_research/config/experiment-v2-measured.json"
+    },
+    {
+      "bytes": 12464,
+      "path": "config/temporal-replication-v6.json",
+      "sha256": "9192e5729f837b60a02033144d881c69c27fd139994b8e36905772e803e11250",
+      "source": "context_research/config/temporal-replication-v6.json"
+    },
+    {
+      "bytes": 3220,
+      "path": "protocol/dual-context-v5-analysis-plan.md",
+      "sha256": "846b6ad469e2d2bbe796b6b4b63dc9534af0d7a8b8bb8f1aba370aa313d15e66",
+      "source": "context_research/protocol/dual-context-v5-analysis-plan.md"
+    },
+    {
+      "bytes": 2587,
+      "path": "protocol/dual-context-v5-analysis-amendment-1.md",
+      "sha256": "758e0d927cd0f2b50d35720b84a5ac357a0aecf5d821ac57168cb17448ebcd4c",
+      "source": "context_research/protocol/dual-context-v5-analysis-amendment-1.md"
+    },
+    {
+      "bytes": 1572,
+      "path": "protocol/dual-context-v5-analysis-amendment-1.freeze.json",
+      "sha256": "3287445c0b5fe46c612cafb90056c4b0a1e4af85b5746d7f3d2bb03f725d5d08",
+      "source": "context_research/protocol/dual-context-v5-analysis-amendment-1.freeze.json"
+    },
+    {
+      "bytes": 3656,
+      "path": "protocol/temporal-replication-v6-plan.md",
+      "sha256": "dc269a7368b4a90bd9372f194d4a2720c8bd24971a11d01c57d0687d141b4e54",
+      "source": "context_research/protocol/temporal-replication-v6-plan.md"
+    },
+    {
+      "bytes": 3679,
+      "path": "protocol/temporal-replication-v6.freeze.json",
+      "sha256": "57fc5c84e31fb45e306e75ddca33b6da491bcc148856baa8c46b09297ef1072e",
+      "source": "context_research/protocol/temporal-replication-v6.freeze.json"
+    },
+    {
+      "bytes": 18906,
+      "path": "scripts/build_paper_evidence.py",
+      "sha256": "acf824f050793f207888457874d31eda57b404189ad9f7fa12e6ee147d0abf73",
+      "source": "context_research/scripts/build_paper_evidence.py"
+    },
+    {
+      "bytes": 37413,
+      "path": "scripts/run_context_study.py",
+      "sha256": "17e617d76bd3f4bf0d49b39bb477fb3aee5a0da4e55ccc801213d5f753a1efce",
+      "source": "context_research/scripts/run_context_study.py"
+    },
+    {
+      "bytes": 6533,
+      "path": "scripts/run_measured_context_study.py",
+      "sha256": "79f7e05b81740a5c5aa78951dce4c8a8da0e6925289fa113d89cdafc738e23a3",
+      "source": "context_research/scripts/run_measured_context_study.py"
+    },
+    {
+      "bytes": 9895,
+      "path": "scripts/evaluate_v5_uncertainty.py",
+      "sha256": "6ccf81a0dcf8c0b29ae83d21dad32f84265fb13b7ddc662928cb4faa287868be",
+      "source": "context_research/scripts/evaluate_v5_uncertainty.py"
+    },
+    {
+      "bytes": 5762,
+      "path": "scripts/audit_v5_observability.py",
+      "sha256": "638308afb368d89ef6e035b6c41fdb639ab548f8c6725fa44b737b4989c05b1e",
+      "source": "context_research/scripts/audit_v5_observability.py"
+    },
+    {
+      "bytes": 24750,
+      "path": "scripts/verify_v5_final_results.py",
+      "sha256": "063d70307c82826f3c4ec353feefa867c1fe4ab4528fc7443cc3e0584fe03173",
+      "source": "context_research/scripts/verify_v5_final_results.py"
+    },
+    {
+      "bytes": 10381,
+      "path": "scripts/apply_locked_context_model.py",
+      "sha256": "0198e1f10a3daa94a639b6c02d353df0f1d7b8067da24a67a7d8928e942a456d",
+      "source": "context_research/scripts/apply_locked_context_model.py"
+    },
+    {
+      "bytes": 23820,
+      "path": "scripts/verify_locked_replication.py",
+      "sha256": "698eeedefa5b072a7d4915b9182ebfdb4450379cce18f820194685771412d535",
+      "source": "context_research/scripts/verify_locked_replication.py"
+    },
+    {
+      "bytes": 17645,
+      "path": "scripts/run_posthoc_rf_and_figures.py",
+      "sha256": "8380aaff2c61bfcb883e37535c0bef5e0a6c257b6dfc1401e6a2047a7c18948e",
+      "source": "context_research/scripts/run_posthoc_rf_and_figures.py"
+    },
+    {
+      "bytes": 4930,
+      "path": "scripts/evaluate_operation_mapping_control.py",
+      "sha256": "f066c0bd3c688ffbfecfc517320c122bc949f3cf789071669fffc55c0934c0ad",
+      "source": "context_research/scripts/evaluate_attack_operation_rule.py"
+    }
+  ],
+  "schema_version": "rivf-reviewer-artifact-manifest-v1",
+  "scope": "analytical reproduction from cleaned features and scores; raw capture excluded",
+  "status": "prepared_nonpublic_no_doi_no_license"
+}

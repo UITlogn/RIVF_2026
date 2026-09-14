@@ -1,0 +1,13 @@
+pair_id,operation,legitimate_launcher,attack_launcher,legitimate_discovery_WHIT,attack_discovery_WHIT,legitimate_records,attack_records,exact_feature_collision,attack_score,attack_threshold,attack_alerted
+ctxv5-p006,service_disable,interactive_shell,interactive_shell,1100,0101,1,1,False,0.8857873741927504,0.8722271137626169,True
+ctxv5-p018,service_disable,interactive_shell,interactive_shell,1111,1111,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p019,shadow_copy_delete,interactive_shell,interactive_shell,1111,1111,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p026,backup_delete,interactive_shell,interactive_shell,0000,0000,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p027,event_log_clear,interactive_shell,interactive_shell,1111,1111,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p031,event_log_clear,interactive_shell,interactive_shell,1100,0101,1,1,False,0.8857873741927504,0.8722271137626169,True
+ctxv5-p035,service_disable,interactive_shell,interactive_shell,0000,0000,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p038,event_log_clear,interactive_shell,interactive_shell,0000,0000,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p044,backup_delete,interactive_shell,interactive_shell,1111,1111,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p050,shadow_copy_delete,interactive_shell,interactive_shell,1100,0101,1,1,False,0.8857873741927504,0.8722271137626169,True
+ctxv5-p067,shadow_copy_delete,interactive_shell,interactive_shell,0000,0000,1,1,True,0.37265759407786014,0.8722271137626169,False
+ctxv5-p070,backup_delete,interactive_shell,interactive_shell,1100,0101,1,1,False,0.8857873741927504,0.8722271137626169,True

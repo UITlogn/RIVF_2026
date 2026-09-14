@@ -1,0 +1,134 @@
+{
+  "checksum_verification_enabled": true,
+  "complete_required": true,
+  "context_field_audit_without_label_association": {
+    "account_role": {
+      "constant": true,
+      "unique_count": 1,
+      "values": {
+        "standard": 144
+      }
+    },
+    "host_scope_count": {
+      "constant": true,
+      "maximum": 1.0,
+      "minimum": 1.0,
+      "unique_count": 1
+    },
+    "launcher_type": {
+      "constant": false,
+      "unique_count": 2,
+      "values": {
+        "delayed_child": 36,
+        "interactive_shell": 108
+      }
+    },
+    "operation_rate_60s": {
+      "constant": true,
+      "maximum": 1.0,
+      "minimum": 1.0,
+      "unique_count": 1
+    },
+    "out_of_hours": {
+      "constant": true,
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "unique_count": 1
+    },
+    "parent_chain_trust": {
+      "constant": true,
+      "unique_count": 1,
+      "values": {
+        "unknown": 144
+      }
+    },
+    "prior_auth_anomaly_count_10m": {
+      "constant": true,
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "unique_count": 1
+    },
+    "prior_discovery_count_5m": {
+      "constant": false,
+      "maximum": 4.0,
+      "minimum": 0.0,
+      "unique_count": 3
+    },
+    "prior_remote_execution_count_5m": {
+      "constant": true,
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "unique_count": 1
+    },
+    "prior_security_impairment_count_5m": {
+      "constant": true,
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "unique_count": 1
+    },
+    "seconds_since_session_start": {
+      "constant": false,
+      "maximum": 7.468202,
+      "minimum": 0.093705,
+      "unique_count": 143
+    },
+    "session_type": {
+      "constant": true,
+      "unique_count": 1,
+      "values": {
+        "batch": 144
+      }
+    },
+    "source_signature_status": {
+      "constant": true,
+      "unique_count": 1,
+      "values": {
+        "unknown": 144
+      }
+    },
+    "target_scope": {
+      "constant": true,
+      "unique_count": 1,
+      "values": {
+        "local_host": 144
+      }
+    }
+  },
+  "created_at": "2026-09-13T16:31:05.517808+00:00",
+  "design": {
+    "capture_profile_version": "rivf-context-v5.0",
+    "planned_pairs": 72,
+    "planned_records": 144,
+    "randomization_seed": 20260911
+  },
+  "errors": [],
+  "inputs": {
+    "artifact_root": "E:\\Downloads\\PAPER2\\artifacts\\context-study-dual-context-v5",
+    "dataset": "E:\\Downloads\\PAPER2\\context_research\\artifacts\\dual-context-v5\\complete-pairs.jsonl",
+    "dataset_sha256": "07a12c9ee6de4cd7142f18c21763dc006c6b7a11ca153fdc460167352008ca9a",
+    "manifest": "E:\\Downloads\\PAPER2\\context_research\\config\\dual-context-campaign-v5.json",
+    "manifest_sha256": "3fd9481b6fa5bb2226456fe5b0935712709eecde84755303f8c2f5600b409bc8"
+  },
+  "observed": {
+    "analytical_records": 144,
+    "archives_found": 144,
+    "capture_profile_counts": {
+      "sha256:9af9799d9b35ef0cc6b47008761638b47f8db91a91847fc3c8a15aefa11b7e2a": 144
+    },
+    "checksum_files_verified": 11088,
+    "claim_eligible_records": 0,
+    "complete_pairs": 72,
+    "exclusion_reason_counts": {
+      "real guarded pilot; scenario inventory and split are not frozen": 144
+    },
+    "missing_planned_records": 0,
+    "raw_runs_verified": 144,
+    "recovered_archives_found": 2,
+    "total_valid_procmon_records": 100450
+  },
+  "schema_version": "rivf-v5-lineage-audit-v1",
+  "valid": true,
+  "warnings": [
+    "claim eligibility is not promoted; preserve raw rows and use a versioned post-audit derivation"
+  ]
+}

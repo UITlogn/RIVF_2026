@@ -1,0 +1,140 @@
+{
+  "analyses": {
+    "measured": {
+      "bootstrap_repetitions_verified": 10000,
+      "models_verified": [
+        "measured_actor_context",
+        "measured_process_context",
+        "operation_only",
+        "timing_proxy_sensitivity"
+      ],
+      "prediction_rows": 576,
+      "predictions_sha256": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2",
+      "report_sha256": "36b9c3b15776538ee9e9a3a1aca8030ce3e48bb61a62f163f7d4057591b81f1a",
+      "splits_verified": [
+        "development",
+        "validation",
+        "test"
+      ],
+      "test_prediction_rows": 192,
+      "uncertainty_sha256": "d2cdf70b9f54b4fd9e05181560cd5e0aa58ec11eecf11f00a053adc9e4179aac",
+      "wilson_summaries_verified": 4
+    },
+    "registered": {
+      "bootstrap_repetitions_verified": 10000,
+      "models_verified": [
+        "actor_context",
+        "full_context",
+        "operation_only"
+      ],
+      "prediction_rows": 432,
+      "predictions_sha256": "bfba5869aebc9d155845711b8da627d51e29d5f6cf7088c524b32c5443dd61a2",
+      "report_sha256": "0f30ad8b0680c453e384d5409426719c594cb8f20fe9e0818875b8a90d60a2bd",
+      "splits_verified": [
+        "development",
+        "validation",
+        "test"
+      ],
+      "test_prediction_rows": 144,
+      "uncertainty_sha256": "df115c87702e589ef052e2200fe6a1e16ed760b5fd038867c2599c64c8442cec",
+      "wilson_summaries_verified": 3
+    }
+  },
+  "checks": {
+    "confusion_matrices": "all models and all splits",
+    "derived_metrics": [
+      "TPR",
+      "FPR",
+      "precision",
+      "accuracy",
+      "MCC",
+      "AUC"
+    ],
+    "paired_metrics": "pair wins/ties/losses and pair-ranking accuracy",
+    "primary_deltas": [
+      "TPR",
+      "FPR",
+      "MCC"
+    ],
+    "subgroups": "test compromised-admin and other attack records",
+    "uncertainty": [
+      "Wilson 95% intervals",
+      "exact paired discordance p-values",
+      "exact pair sign-test p-values",
+      "deterministic matched-pair bootstrap percentile intervals"
+    ]
+  },
+  "created_at": "2026-09-13T16:31:14.325709+00:00",
+  "datasets": {
+    "measured_v2": {
+      "attack_by_account_state": {
+        "compromised": 36,
+        "not_applicable": 36
+      },
+      "by_context_profile_and_label": {
+        "None|attack_preparation": 72,
+        "None|legitimate_admin": 72
+      },
+      "by_operation_and_label": {
+        "backup_delete|attack_preparation": 18,
+        "backup_delete|legitimate_admin": 18,
+        "event_log_clear|attack_preparation": 18,
+        "event_log_clear|legitimate_admin": 18,
+        "service_disable|attack_preparation": 18,
+        "service_disable|legitimate_admin": 18,
+        "shadow_copy_delete|attack_preparation": 18,
+        "shadow_copy_delete|legitimate_admin": 18
+      },
+      "by_split_and_label": {
+        "development|attack_preparation": 24,
+        "development|legitimate_admin": 24,
+        "test|attack_preparation": 24,
+        "test|legitimate_admin": 24,
+        "validation|attack_preparation": 24,
+        "validation|legitimate_admin": 24
+      },
+      "pairs": 72,
+      "path": "E:\\Downloads\\PAPER2\\context_research\\artifacts\\dual-context-v5\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "records": 144,
+      "sha256": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e",
+      "unique_record_ids": 144
+    },
+    "registered_v1": {
+      "attack_by_account_state": {
+        "compromised": 36,
+        "not_applicable": 36
+      },
+      "by_context_profile_and_label": {
+        "None|attack_preparation": 72,
+        "None|legitimate_admin": 72
+      },
+      "by_operation_and_label": {
+        "backup_delete|attack_preparation": 18,
+        "backup_delete|legitimate_admin": 18,
+        "event_log_clear|attack_preparation": 18,
+        "event_log_clear|legitimate_admin": 18,
+        "service_disable|attack_preparation": 18,
+        "service_disable|legitimate_admin": 18,
+        "shadow_copy_delete|attack_preparation": 18,
+        "shadow_copy_delete|legitimate_admin": 18
+      },
+      "by_split_and_label": {
+        "development|attack_preparation": 24,
+        "development|legitimate_admin": 24,
+        "test|attack_preparation": 24,
+        "test|legitimate_admin": 24,
+        "validation|attack_preparation": 24,
+        "validation|legitimate_admin": 24
+      },
+      "pairs": 72,
+      "path": "E:\\Downloads\\PAPER2\\context_research\\artifacts\\dual-context-v5\\final\\complete-pairs-claim-v1.jsonl",
+      "records": 144,
+      "sha256": "91b095259a1346b540283cd34ee4e91409235792c50a217c68d00eb47490024f",
+      "unique_record_ids": 144
+    }
+  },
+  "errors": [],
+  "method": "standard-library recomputation from claim-eligible JSONL and exported per-record scores",
+  "schema_version": "rivf-v5-independent-result-verification-v1",
+  "status": "pass"
+}

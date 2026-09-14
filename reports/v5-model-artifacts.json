@@ -1,0 +1,255 @@
+{
+  "created_at": "2026-09-13T16:31:12.918036Z",
+  "models": {
+    "measured_actor_context": {
+      "encoder": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "categories": {
+          "context.account_role": [
+            "standard"
+          ],
+          "context.launcher_type": [
+            "delayed_child",
+            "interactive_shell"
+          ],
+          "operation": [
+            "backup_delete",
+            "event_log_clear",
+            "service_disable",
+            "shadow_copy_delete"
+          ]
+        },
+        "feature_names": [
+          "intercept",
+          "operation=backup_delete",
+          "operation=event_log_clear",
+          "operation=service_disable",
+          "operation=shadow_copy_delete",
+          "operation=__UNKNOWN__",
+          "context.launcher_type=delayed_child",
+          "context.launcher_type=interactive_shell",
+          "context.launcher_type=__UNKNOWN__",
+          "context.account_role=standard",
+          "context.account_role=__UNKNOWN__"
+        ],
+        "means": {},
+        "numeric": [],
+        "scales": {}
+      },
+      "threshold": 0.9017658822260124,
+      "weights": {
+        "context.account_role=__UNKNOWN__": 0.0,
+        "context.account_role=standard": 0.27227016235514007,
+        "context.launcher_type=__UNKNOWN__": 0.0,
+        "context.launcher_type=delayed_child": 1.531544937782107,
+        "context.launcher_type=interactive_shell": -1.2592747754269735,
+        "intercept": 0.34511870504637326,
+        "operation=__UNKNOWN__": 0.0,
+        "operation=backup_delete": 0.068067540588785,
+        "operation=event_log_clear": 0.068067540588785,
+        "operation=service_disable": 0.068067540588785,
+        "operation=shadow_copy_delete": 0.068067540588785
+      }
+    },
+    "measured_process_context": {
+      "encoder": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "categories": {
+          "context.account_role": [
+            "standard"
+          ],
+          "context.launcher_type": [
+            "delayed_child",
+            "interactive_shell"
+          ],
+          "operation": [
+            "backup_delete",
+            "event_log_clear",
+            "service_disable",
+            "shadow_copy_delete"
+          ]
+        },
+        "feature_names": [
+          "intercept",
+          "operation=backup_delete",
+          "operation=event_log_clear",
+          "operation=service_disable",
+          "operation=shadow_copy_delete",
+          "operation=__UNKNOWN__",
+          "context.launcher_type=delayed_child",
+          "context.launcher_type=interactive_shell",
+          "context.launcher_type=__UNKNOWN__",
+          "context.account_role=standard",
+          "context.account_role=__UNKNOWN__",
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist"
+        ],
+        "means": {
+          "context.observed_hostname": 0.6666666666666666,
+          "context.observed_ipconfig": 0.3333333333333333,
+          "context.observed_tasklist": 0.5,
+          "context.observed_whoami": 0.5
+        },
+        "numeric": [
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist"
+        ],
+        "scales": {
+          "context.observed_hostname": 0.4714045207910317,
+          "context.observed_ipconfig": 0.4714045207910317,
+          "context.observed_tasklist": 0.5,
+          "context.observed_whoami": 0.5
+        }
+      },
+      "threshold": 0.8722271137626169,
+      "weights": {
+        "context.account_role=__UNKNOWN__": 0.0,
+        "context.account_role=standard": 0.23848138672681785,
+        "context.launcher_type=__UNKNOWN__": 0.0,
+        "context.launcher_type=delayed_child": 1.3400546702207756,
+        "context.launcher_type=interactive_shell": -1.101573283493959,
+        "context.observed_hostname": 0.027457050806150005,
+        "context.observed_ipconfig": -0.027457050806149793,
+        "context.observed_tasklist": 1.255501180676669,
+        "context.observed_whoami": -1.2555011806766692,
+        "intercept": 0.3020541430792705,
+        "operation=__UNKNOWN__": 0.0,
+        "operation=backup_delete": 0.05962034668170447,
+        "operation=event_log_clear": 0.059620346681704475,
+        "operation=service_disable": 0.05962034668170447,
+        "operation=shadow_copy_delete": 0.059620346681704475
+      }
+    },
+    "operation_only": {
+      "encoder": {
+        "categorical": [
+          "operation"
+        ],
+        "categories": {
+          "operation": [
+            "backup_delete",
+            "event_log_clear",
+            "service_disable",
+            "shadow_copy_delete"
+          ]
+        },
+        "feature_names": [
+          "intercept",
+          "operation=backup_delete",
+          "operation=event_log_clear",
+          "operation=service_disable",
+          "operation=shadow_copy_delete",
+          "operation=__UNKNOWN__"
+        ],
+        "means": {},
+        "numeric": [],
+        "scales": {}
+      },
+      "threshold": 0.500000000001,
+      "weights": {
+        "intercept": 0.0,
+        "operation=__UNKNOWN__": 0.0,
+        "operation=backup_delete": 0.0,
+        "operation=event_log_clear": 0.0,
+        "operation=service_disable": 0.0,
+        "operation=shadow_copy_delete": 0.0
+      }
+    },
+    "timing_proxy_sensitivity": {
+      "encoder": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "categories": {
+          "context.account_role": [
+            "standard"
+          ],
+          "context.launcher_type": [
+            "delayed_child",
+            "interactive_shell"
+          ],
+          "operation": [
+            "backup_delete",
+            "event_log_clear",
+            "service_disable",
+            "shadow_copy_delete"
+          ]
+        },
+        "feature_names": [
+          "intercept",
+          "operation=backup_delete",
+          "operation=event_log_clear",
+          "operation=service_disable",
+          "operation=shadow_copy_delete",
+          "operation=__UNKNOWN__",
+          "context.launcher_type=delayed_child",
+          "context.launcher_type=interactive_shell",
+          "context.launcher_type=__UNKNOWN__",
+          "context.account_role=standard",
+          "context.account_role=__UNKNOWN__",
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist",
+          "context.seconds_since_session_start"
+        ],
+        "means": {
+          "context.observed_hostname": 0.6666666666666666,
+          "context.observed_ipconfig": 0.3333333333333333,
+          "context.observed_tasklist": 0.5,
+          "context.observed_whoami": 0.5,
+          "context.seconds_since_session_start": 3.516233354166667
+        },
+        "numeric": [
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist",
+          "context.seconds_since_session_start"
+        ],
+        "scales": {
+          "context.observed_hostname": 0.4714045207910317,
+          "context.observed_ipconfig": 0.4714045207910317,
+          "context.observed_tasklist": 0.5,
+          "context.observed_whoami": 0.5,
+          "context.seconds_since_session_start": 2.569324188711567
+        }
+      },
+      "threshold": 0.3919227783411211,
+      "weights": {
+        "context.account_role=__UNKNOWN__": 0.0,
+        "context.account_role=standard": 0.23706728365387558,
+        "context.launcher_type=__UNKNOWN__": 0.0,
+        "context.launcher_type=delayed_child": 1.3118418307442061,
+        "context.launcher_type=interactive_shell": -1.0747745470903303,
+        "context.observed_hostname": -0.15911182540283725,
+        "context.observed_ipconfig": -0.17008388029303617,
+        "context.observed_tasklist": 1.0559558557520463,
+        "context.observed_whoami": -1.3663245435321072,
+        "context.seconds_since_session_start": 0.56101086932107,
+        "intercept": 0.3003731204127976,
+        "operation=__UNKNOWN__": 0.0,
+        "operation=backup_delete": 0.06420895354698597,
+        "operation=event_log_clear": 0.05541269234556036,
+        "operation=service_disable": 0.06792401193215925,
+        "operation=shadow_copy_delete": 0.04952162582916985
+      }
+    }
+  },
+  "schema_version": "context-measured-model-artifacts-v1",
+  "status": "held_out_result_candidate_requires_manual_audit"
+}

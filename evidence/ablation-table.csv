@@ -1,0 +1,5 @@
+level,model,threshold,tp,fn,fp,tn,tpr,fpr,precision,accuracy,mcc,auc,pair_wins,pair_ties,pair_losses,pair_ranking_accuracy,compromised_admin_detected,compromised_admin_total,analysis_status
+0,operation_only,0.500000000001,0,24,0,24,0.0,0.0,,0.5,0.0,0.5,0,24,0,0.5,0,12,frozen_primary_ablation
+1,measured_actor_context,0.9017658822260124,12,12,0,24,0.5,0.0,1.0,0.75,0.5773502691896257,0.75,12,12,0,0.75,0,12,frozen_primary_ablation
+2,measured_process_context,0.8722271137626169,16,8,0,24,0.6666666666666666,0.0,1.0,0.8333333333333334,0.7071067811865476,0.8888888888888888,16,8,0,0.8333333333333334,4,12,frozen_primary_ablation
+3,timing_proxy_sensitivity,0.3919227783411211,16,8,0,24,0.6666666666666666,0.0,1.0,0.8333333333333334,0.7071067811865476,0.8836805555555556,20,0,4,0.8333333333333334,4,12,audit_motivated_prefrozen_sensitivity

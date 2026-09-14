@@ -1,0 +1,18 @@
+{
+  "schema_version": "rivf-analysis-freeze-v1",
+  "frozen_at": "2026-09-13T11:00:00+07:00",
+  "test_analysis_performed_before_freeze": false,
+  "note": "Hashes freeze the measured-only amendment before any v5 model, threshold, aggregate test statistic, or test metric is computed.",
+  "files": {
+    "context_research/protocol/dual-context-v5-analysis-amendment-1.md": "758e0d927cd0f2b50d35720b84a5ac357a0aecf5d821ac57168cb17448ebcd4c",
+    "context_research/config/experiment-v1.json": "06ce0a423dd77bc8274c43ef67f0e382d2d1a0ea513724709274f03c0932c352",
+    "context_research/config/experiment-v2-measured.json": "d6fbb1d20af89c87d1f003cb17345118fae02da3f9469bf6a77c64e6fba37635",
+    "context_research/schema/context-record-v2.schema.json": "813d26359f7545bd8e5f752fae9724ccfbd1c14360d0423cc1132644b3def878",
+    "context_research/scripts/run_context_study.py": "17e617d76bd3f4bf0d49b39bb477fb3aee5a0da4e55ccc801213d5f753a1efce",
+    "context_research/scripts/derive_v5_measured_features.py": "dacf661992941e82f8f8ffac6bac878935003bdadd359e0d9c6f598f00ecb757",
+    "context_research/scripts/run_measured_context_study.py": "79f7e05b81740a5c5aa78951dce4c8a8da0e6925289fa113d89cdafc738e23a3",
+    "context_research/scripts/evaluate_v5_uncertainty.py": "6ccf81a0dcf8c0b29ae83d21dad32f84265fb13b7ddc662928cb4faa287868be",
+    "context_research/scripts/audit_v5_lineage.py": "4e7f00547a13dc5bdd472d5332ba565ea0b38c0e49cfda0ab923c0a7a6ae28ce",
+    "context_research/scripts/audit_v5_observability.py": "638308afb368d89ef6e035b6c41fdb639ab548f8c6725fa44b737b4989c05b1e"
+  }
+}

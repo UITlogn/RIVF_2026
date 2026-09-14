@@ -1,0 +1,93 @@
+{
+  "claim_boundary": "Locked temporal replication on the same VM and scripted templates; not external validation, enterprise telemetry, malware detection, or successful effects.",
+  "created_at": "2026-09-13T20:04:19.869359+00:00",
+  "input_sha256": "3916383216b654f31d6c5f66f3ef14190c6d76b841141a1a8b677118391c7899",
+  "locked_model_artifacts_sha256": "b7c198bd01113e3226b3efbb43535199beff654928c5b8f38153fa152fd58cd7",
+  "manifest_sha256": "9192e5729f837b60a02033144d881c69c27fd139994b8e36905772e803e11250",
+  "models": {
+    "measured_process_context": {
+      "locked_threshold": 0.8722271137626169,
+      "test": {
+        "auc": 0.8888888888888888,
+        "compromised_admin_audit": {
+          "account_state_label": "compromised",
+          "attack_records": 12,
+          "detected": 4,
+          "detection_rate": 0.3333333333333333
+        },
+        "metrics": {
+          "accuracy": 0.8333333333333334,
+          "fn": 8,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.7071067811865476,
+          "precision": 1.0,
+          "tn": 24,
+          "tp": 16,
+          "tpr": 0.6666666666666666
+        },
+        "other_attack_audit": {
+          "account_state_label": "not_applicable",
+          "attack_records": 12,
+          "detected": 12,
+          "detection_rate": 1.0
+        },
+        "pair_ranking": {
+          "losses": 0,
+          "pair_ranking_accuracy": 0.8333333333333334,
+          "pairs": 24,
+          "ties": 8,
+          "wins": 16
+        }
+      }
+    },
+    "operation_only": {
+      "locked_threshold": 0.500000000001,
+      "test": {
+        "auc": 0.5,
+        "compromised_admin_audit": {
+          "account_state_label": "compromised",
+          "attack_records": 12,
+          "detected": 0,
+          "detection_rate": 0.0
+        },
+        "metrics": {
+          "accuracy": 0.5,
+          "fn": 24,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.0,
+          "precision": null,
+          "tn": 24,
+          "tp": 0,
+          "tpr": 0.0
+        },
+        "other_attack_audit": {
+          "account_state_label": "not_applicable",
+          "attack_records": 12,
+          "detected": 0,
+          "detection_rate": 0.0
+        },
+        "pair_ranking": {
+          "losses": 0,
+          "pair_ranking_accuracy": 0.5,
+          "pairs": 24,
+          "ties": 24,
+          "wins": 0
+        }
+      }
+    }
+  },
+  "no_retraining": true,
+  "pairs": 24,
+  "primary_comparison": {
+    "baseline_model": "operation_only",
+    "candidate_model": "measured_process_context",
+    "delta_fpr": 0.0,
+    "delta_mcc": 0.7071067811865476,
+    "delta_tpr": 0.6666666666666666
+  },
+  "records": 48,
+  "schema_version": "rivf-locked-temporal-replication-result-v1",
+  "status": "confirmatory_temporal_replication_candidate_requires_author_review"
+}

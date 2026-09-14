@@ -1,0 +1,100 @@
+{
+  "schema_version": "context-experiment-config-v1",
+  "study_id": "rivf-2026-v5-measured-context-paired-study",
+  "target_venue": "RIVF 2026",
+  "paper_page_limit_including_references": 6,
+  "research_question": "When the administrative operation is held constant, do measured process-context signals help rank scripted attack-preparation attempts above scripted legitimate-administration attempts?",
+  "primary_comparison": {
+    "baseline_model": "operation_only",
+    "candidate_model": "measured_process_context",
+    "selection_split": "validation",
+    "evaluation_split": "test",
+    "maximum_validation_false_positive_rate": 0.05,
+    "primary_endpoint": "test true-positive-rate difference at thresholds independently selected under the same validation false-positive-rate cap"
+  },
+  "feature_sets": {
+    "operation_only": {
+      "categorical": ["operation"],
+      "numeric": []
+    },
+    "measured_actor_context": {
+      "categorical": [
+        "operation",
+        "context.launcher_type",
+        "context.account_role"
+      ],
+      "numeric": []
+    },
+    "measured_process_context": {
+      "categorical": [
+        "operation",
+        "context.launcher_type",
+        "context.account_role"
+      ],
+      "numeric": [
+        "context.observed_whoami",
+        "context.observed_hostname",
+        "context.observed_ipconfig",
+        "context.observed_tasklist"
+      ]
+    },
+    "timing_proxy_sensitivity": {
+      "categorical": [
+        "operation",
+        "context.launcher_type",
+        "context.account_role"
+      ],
+      "numeric": [
+        "context.observed_whoami",
+        "context.observed_hostname",
+        "context.observed_ipconfig",
+        "context.observed_tasklist",
+        "context.seconds_since_session_start"
+      ]
+    }
+  },
+  "forbidden_feature_fields": [
+    "record_id",
+    "pair_id",
+    "split",
+    "workload_group",
+    "label",
+    "account_state_label",
+    "synthetic",
+    "claim_eligible",
+    "exclusion_reason",
+    "context.source_signature_status",
+    "context.parent_chain_trust",
+    "context.session_type",
+    "context.target_scope",
+    "context.host_scope_count",
+    "context.prior_auth_anomaly_count_10m",
+    "context.prior_discovery_count_5m",
+    "context.prior_remote_execution_count_5m",
+    "context.prior_security_impairment_count_5m",
+    "context.operation_rate_60s",
+    "context.out_of_hours",
+    "provenance.capture_profile_id",
+    "provenance.source_artifact",
+    "provenance.source_artifact_sha256"
+  ],
+  "training": {
+    "algorithm": "standardized one-hot logistic regression",
+    "epochs": 1600,
+    "learning_rate": 0.05,
+    "l2": 0.01
+  },
+  "required_splits": ["development", "validation", "test"],
+  "required_labels": ["legitimate_admin", "attack_preparation"],
+  "scientific_guards": [
+    "Every matched pair contains the same administrative operation under both labels.",
+    "Workload groups are disjoint across development, validation, and test.",
+    "Thresholds are selected on validation only and applied unchanged to test.",
+    "account_state_label and scenario profiles are audit-only and never model features.",
+    "Measured process features are derived from validated raw process-creation evidence.",
+    "Scenario elapsed time appears only in a separately named timing-proxy sensitivity model.",
+    "Unknown or constant context fields are excluded from the measured-only primary candidate.",
+    "Quality or telemetry failures are exclusions, not classifier false negatives."
+  ]
+}
+

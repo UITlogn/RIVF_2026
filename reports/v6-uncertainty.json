@@ -1,0 +1,250 @@
+{
+  "baseline_model": "operation_only",
+  "candidate_model": "measured_process_context",
+  "created_at": "2026-09-13T20:04:19.960279+00:00",
+  "interpretation": "Intervals quantify finite-test-set uncertainty for frozen test predictions; they do not address external-population or scenario-design uncertainty.",
+  "model_summaries": {
+    "measured_process_context": {
+      "attack_detection_by_account_state": {
+        "compromised": {
+          "estimate": 0.3333333333333333,
+          "lower": 0.13812009109121315,
+          "successes": 4,
+          "trials": 12,
+          "upper": 0.6093779111272004
+        },
+        "not_applicable": {
+          "estimate": 1.0,
+          "lower": 0.7575059933447592,
+          "successes": 12,
+          "trials": 12,
+          "upper": 1.0
+        }
+      },
+      "by_operation": {
+        "backup_delete": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.6666666666666666,
+            "lower": 0.299993315138392,
+            "successes": 4,
+            "trials": 6,
+            "upper": 0.9032285888942195
+          }
+        },
+        "event_log_clear": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.6666666666666666,
+            "lower": 0.299993315138392,
+            "successes": 4,
+            "trials": 6,
+            "upper": 0.9032285888942195
+          }
+        },
+        "service_disable": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.6666666666666666,
+            "lower": 0.299993315138392,
+            "successes": 4,
+            "trials": 6,
+            "upper": 0.9032285888942195
+          }
+        },
+        "shadow_copy_delete": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.6666666666666666,
+            "lower": 0.299993315138392,
+            "successes": 4,
+            "trials": 6,
+            "upper": 0.9032285888942195
+          }
+        }
+      },
+      "fpr_wilson_95": {
+        "estimate": 0.0,
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 24,
+        "upper": 0.13797620467498017
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.8333333333333334,
+        "exact_sign_test_pvalue_excluding_ties": 3.0517578125e-05,
+        "losses": 0,
+        "ties": 8,
+        "wins": 16
+      },
+      "tpr_wilson_95": {
+        "estimate": 0.6666666666666666,
+        "lower": 0.4670631683813174,
+        "successes": 16,
+        "trials": 24,
+        "upper": 0.8202780967270225
+      }
+    },
+    "operation_only": {
+      "attack_detection_by_account_state": {
+        "compromised": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "successes": 0,
+          "trials": 12,
+          "upper": 0.24249400665524085
+        },
+        "not_applicable": {
+          "estimate": 0.0,
+          "lower": 0.0,
+          "successes": 0,
+          "trials": 12,
+          "upper": 0.24249400665524085
+        }
+      },
+      "by_operation": {
+        "backup_delete": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          }
+        },
+        "event_log_clear": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          }
+        },
+        "service_disable": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          }
+        },
+        "shadow_copy_delete": {
+          "fpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          },
+          "tpr": {
+            "estimate": 0.0,
+            "lower": 0.0,
+            "successes": 0,
+            "trials": 6,
+            "upper": 0.3903342879021653
+          }
+        }
+      },
+      "fpr_wilson_95": {
+        "estimate": 0.0,
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 24,
+        "upper": 0.13797620467498017
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.5,
+        "exact_sign_test_pvalue_excluding_ties": 1.0,
+        "losses": 0,
+        "ties": 24,
+        "wins": 0
+      },
+      "tpr_wilson_95": {
+        "estimate": 0.0,
+        "lower": 0.0,
+        "successes": 0,
+        "trials": 24,
+        "upper": 0.13797620467498017
+      }
+    }
+  },
+  "paired_cluster_bootstrap": {
+    "delta_fpr_percentile_95": {
+      "lower": 0.0,
+      "median": 0.0,
+      "upper": 0.0
+    },
+    "delta_tpr_percentile_95": {
+      "lower": 0.4583333333333333,
+      "median": 0.6666666666666666,
+      "upper": 0.8333333333333334
+    },
+    "repetitions": 10000,
+    "seed": 20260913,
+    "unit": "matched_test_pair"
+  },
+  "primary_discordance": {
+    "attack_records": {
+      "agreements": 8,
+      "baseline_alert_candidate_no_alert": 0,
+      "candidate_alert_baseline_no_alert": 16,
+      "discordant": 16,
+      "exact_two_sided_pvalue": 3.0517578125e-05
+    },
+    "legitimate_records": {
+      "agreements": 24,
+      "baseline_alert_candidate_no_alert": 0,
+      "candidate_alert_baseline_no_alert": 0,
+      "discordant": 0,
+      "exact_two_sided_pvalue": 1.0
+    }
+  },
+  "schema_version": "rivf-v5-paired-uncertainty-v1"
+}

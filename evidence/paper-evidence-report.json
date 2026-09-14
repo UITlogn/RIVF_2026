@@ -1,0 +1,175 @@
+{
+  "ablation": [
+    {
+      "accuracy": 0.5,
+      "analysis_status": "frozen_primary_ablation",
+      "auc": 0.5,
+      "compromised_admin_detected": 0,
+      "compromised_admin_total": 12,
+      "fn": 24,
+      "fp": 0,
+      "fpr": 0.0,
+      "level": 0,
+      "mcc": 0.0,
+      "model": "operation_only",
+      "pair_losses": 0,
+      "pair_ranking_accuracy": 0.5,
+      "pair_ties": 24,
+      "pair_wins": 0,
+      "precision": null,
+      "threshold": 0.500000000001,
+      "tn": 24,
+      "tp": 0,
+      "tpr": 0.0
+    },
+    {
+      "accuracy": 0.75,
+      "analysis_status": "frozen_primary_ablation",
+      "auc": 0.75,
+      "compromised_admin_detected": 0,
+      "compromised_admin_total": 12,
+      "fn": 12,
+      "fp": 0,
+      "fpr": 0.0,
+      "level": 1,
+      "mcc": 0.5773502691896257,
+      "model": "measured_actor_context",
+      "pair_losses": 0,
+      "pair_ranking_accuracy": 0.75,
+      "pair_ties": 12,
+      "pair_wins": 12,
+      "precision": 1.0,
+      "threshold": 0.9017658822260124,
+      "tn": 24,
+      "tp": 12,
+      "tpr": 0.5
+    },
+    {
+      "accuracy": 0.8333333333333334,
+      "analysis_status": "frozen_primary_ablation",
+      "auc": 0.8888888888888888,
+      "compromised_admin_detected": 4,
+      "compromised_admin_total": 12,
+      "fn": 8,
+      "fp": 0,
+      "fpr": 0.0,
+      "level": 2,
+      "mcc": 0.7071067811865476,
+      "model": "measured_process_context",
+      "pair_losses": 0,
+      "pair_ranking_accuracy": 0.8333333333333334,
+      "pair_ties": 8,
+      "pair_wins": 16,
+      "precision": 1.0,
+      "threshold": 0.8722271137626169,
+      "tn": 24,
+      "tp": 16,
+      "tpr": 0.6666666666666666
+    },
+    {
+      "accuracy": 0.8333333333333334,
+      "analysis_status": "audit_motivated_prefrozen_sensitivity",
+      "auc": 0.8836805555555556,
+      "compromised_admin_detected": 4,
+      "compromised_admin_total": 12,
+      "fn": 8,
+      "fp": 0,
+      "fpr": 0.0,
+      "level": 3,
+      "mcc": 0.7071067811865476,
+      "model": "timing_proxy_sensitivity",
+      "pair_losses": 4,
+      "pair_ranking_accuracy": 0.8333333333333334,
+      "pair_ties": 0,
+      "pair_wins": 20,
+      "precision": 1.0,
+      "threshold": 0.3919227783411211,
+      "tn": 24,
+      "tp": 16,
+      "tpr": 0.6666666666666666
+    }
+  ],
+  "collision_audit": {
+    "claim_boundary": "The eight collisions bound deterministic pointwise models using this exact feature projection on this frozen test set. They do not show that the underlying telemetry or sensor contains no additional usable information.",
+    "compromised_admin_pairs": 12,
+    "detected_collision_attacks": 0,
+    "detected_noncollision_attacks": 4,
+    "exact_feature_collision_pairs": 8,
+    "noncollision_compromised_pairs": 4
+  },
+  "created_at": "2026-09-14T09:12:40.151413+00:00",
+  "inputs": {
+    "logistic_predictions": {
+      "path": "output\\context-study\\runs\\rivf-context-dual-context-v5-measured-final\\predictions.csv",
+      "sha256": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2"
+    },
+    "model_report": {
+      "path": "output\\context-study\\runs\\rivf-context-dual-context-v5-measured-final\\model-report.json",
+      "sha256": "36b9c3b15776538ee9e9a3a1aca8030ce3e48bb61a62f163f7d4057591b81f1a"
+    },
+    "rf_predictions": {
+      "path": "output\\context-study\\runs\\rivf-context-posthoc-rf-robustness-v1\\random-forest-predictions.csv",
+      "sha256": "157778d31f1e83efee51fc8f2faa202c82861d2ef3ce9af71175c8cb40543e95"
+    },
+    "v5_dataset": {
+      "path": "context_research\\artifacts\\dual-context-v5\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e"
+    }
+  },
+  "outputs": [
+    "model-diagnostics.png",
+    "roc-points.csv",
+    "ablation-table.csv",
+    "compromised-admin-pair-audit.csv",
+    "exact-collision-pairs.csv",
+    "heldout-scores.csv"
+  ],
+  "roc": [
+    {
+      "auc_rank": 0.5,
+      "auc_sklearn": 0.5,
+      "auc_trapezoid_grouped_points": 0.5,
+      "display_name": "Operation only",
+      "model": "operation_only",
+      "positive_negative_score_losses": 0,
+      "positive_negative_score_ties": 576,
+      "positive_negative_score_wins": 0,
+      "unique_score_groups": 1
+    },
+    {
+      "auc_rank": 0.8888888888888888,
+      "auc_sklearn": 0.8888888888888888,
+      "auc_trapezoid_grouped_points": 0.8888888888888888,
+      "display_name": "Logistic context",
+      "model": "measured_process_context",
+      "positive_negative_score_losses": 0,
+      "positive_negative_score_ties": 128,
+      "positive_negative_score_wins": 448,
+      "unique_score_groups": 5
+    },
+    {
+      "auc_rank": 0.8888888888888888,
+      "auc_sklearn": 0.8888888888888888,
+      "auc_trapezoid_grouped_points": 0.888888888888889,
+      "display_name": "Random Forest",
+      "model": "random_forest",
+      "positive_negative_score_losses": 56,
+      "positive_negative_score_ties": 16,
+      "positive_negative_score_wins": 504,
+      "unique_score_groups": 28
+    }
+  ],
+  "roc_method": "Unique score values are processed in descending order. All records with an equal score enter the ROC point together. Adjacent grouped points are connected linearly; trapezoidal AUC is cross-checked against Mann--Whitney AUC with 0.5 credit for positive-negative ties.",
+  "schema_version": "rivf-paper-evidence-v2",
+  "software": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.2.6",
+    "python": "3.13.3",
+    "scikit_learn": "1.9.1"
+  },
+  "status": "audited_reconstruction_from_frozen_scores",
+  "threshold_rule_from_frozen_engine": {
+    "maximum_validation_fpr": 0.05,
+    "rule": "Enumerate thresholds above the maximum score, at every unique validation score, and below the minimum. Among thresholds with FPR <= 0.05, maximize TPR; break ties by lower FPR, then higher threshold."
+  }
+}

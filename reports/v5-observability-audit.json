@@ -1,0 +1,194 @@
+{
+  "created_at": "2026-09-13T16:31:11.637394+00:00",
+  "interpretation": "Within-pair identical vectors cannot receive different scores from a deterministic pointwise model using only the listed features. This is an observability bound, not an estimate of external-population error.",
+  "models": {
+    "measured_actor_context": {
+      "by_split": {
+        "development": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.75,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 36,
+          "within_pair_distinguishable_feature_vectors": 12,
+          "within_pair_identical_feature_vectors": 12
+        },
+        "test": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.75,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 36,
+          "within_pair_distinguishable_feature_vectors": 12,
+          "within_pair_identical_feature_vectors": 12
+        },
+        "validation": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.75,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 36,
+          "within_pair_distinguishable_feature_vectors": 12,
+          "within_pair_identical_feature_vectors": 12
+        }
+      },
+      "features": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "numeric": []
+      }
+    },
+    "measured_process_context": {
+      "by_split": {
+        "development": {
+          "cross_label_collision_groups": 8,
+          "identical_by_attack_account_state": {
+            "compromised": 8
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.8333333333333334,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 24,
+          "within_pair_distinguishable_feature_vectors": 16,
+          "within_pair_identical_feature_vectors": 8
+        },
+        "test": {
+          "cross_label_collision_groups": 8,
+          "identical_by_attack_account_state": {
+            "compromised": 8
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.8333333333333334,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 24,
+          "within_pair_distinguishable_feature_vectors": 16,
+          "within_pair_identical_feature_vectors": 8
+        },
+        "validation": {
+          "cross_label_collision_groups": 8,
+          "identical_by_attack_account_state": {
+            "compromised": 8
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.8333333333333334,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 24,
+          "within_pair_distinguishable_feature_vectors": 16,
+          "within_pair_identical_feature_vectors": 8
+        }
+      },
+      "features": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "numeric": [
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist"
+        ]
+      }
+    },
+    "operation_only": {
+      "by_split": {
+        "development": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12,
+            "not_applicable": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.5,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 48,
+          "within_pair_distinguishable_feature_vectors": 0,
+          "within_pair_identical_feature_vectors": 24
+        },
+        "test": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12,
+            "not_applicable": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.5,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 48,
+          "within_pair_distinguishable_feature_vectors": 0,
+          "within_pair_identical_feature_vectors": 24
+        },
+        "validation": {
+          "cross_label_collision_groups": 4,
+          "identical_by_attack_account_state": {
+            "compromised": 12,
+            "not_applicable": 12
+          },
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 0.5,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 48,
+          "within_pair_distinguishable_feature_vectors": 0,
+          "within_pair_identical_feature_vectors": 24
+        }
+      },
+      "features": {
+        "categorical": [
+          "operation"
+        ],
+        "numeric": []
+      }
+    },
+    "timing_proxy_sensitivity": {
+      "by_split": {
+        "development": {
+          "cross_label_collision_groups": 0,
+          "identical_by_attack_account_state": {},
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 1.0,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 0,
+          "within_pair_distinguishable_feature_vectors": 24,
+          "within_pair_identical_feature_vectors": 0
+        },
+        "test": {
+          "cross_label_collision_groups": 0,
+          "identical_by_attack_account_state": {},
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 1.0,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 0,
+          "within_pair_distinguishable_feature_vectors": 24,
+          "within_pair_identical_feature_vectors": 0
+        },
+        "validation": {
+          "cross_label_collision_groups": 0,
+          "identical_by_attack_account_state": {},
+          "maximum_pair_ranking_if_all_distinguishable_pairs_are_oriented_correctly": 1.0,
+          "pairs": 24,
+          "records_in_cross_label_collision_groups": 0,
+          "within_pair_distinguishable_feature_vectors": 24,
+          "within_pair_identical_feature_vectors": 0
+        }
+      },
+      "features": {
+        "categorical": [
+          "operation",
+          "context.launcher_type",
+          "context.account_role"
+        ],
+        "numeric": [
+          "context.observed_whoami",
+          "context.observed_hostname",
+          "context.observed_ipconfig",
+          "context.observed_tasklist",
+          "context.seconds_since_session_start"
+        ]
+      }
+    }
+  },
+  "records": 144,
+  "schema_version": "rivf-v5-observability-audit-v1"
+}

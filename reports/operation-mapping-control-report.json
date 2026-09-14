@@ -1,0 +1,77 @@
+{
+  "claim_guard": "The rule was added after v5 test access. It quantifies the behavior of an operation-level ATT&CK match and is not a confirmatory result.",
+  "inputs": {
+    "v5_dataset": {
+      "path": "context_research\\artifacts\\dual-context-v5\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e"
+    },
+    "v6_dataset": {
+      "path": "context_research\\artifacts\\temporal-replication-v6\\final\\complete-pairs-measured-claim-v2.jsonl",
+      "sha256": "3916383216b654f31d6c5f66f3ef14190c6d76b841141a1a8b677118391c7899"
+    }
+  },
+  "interpretation": "All four study operations are ATT&CK-relevant, so the rule alerts on every record. It achieves full sensitivity but 100% FPR and is infeasible under the study's 5% FPR budget.",
+  "results": {
+    "v5_test": {
+      "confusion": {
+        "fn": 0,
+        "fp": 24,
+        "tn": 0,
+        "tp": 24
+      },
+      "metrics": {
+        "accuracy": 0.5,
+        "auc": 0.5,
+        "fpr": 1.0,
+        "mcc": 0.0,
+        "precision": 0.5,
+        "tpr": 1.0
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.5,
+        "losses": 0,
+        "ties": 24,
+        "wins": 0
+      },
+      "pairs": 24,
+      "records": 48
+    },
+    "v6_replication": {
+      "confusion": {
+        "fn": 0,
+        "fp": 24,
+        "tn": 0,
+        "tp": 24
+      },
+      "metrics": {
+        "accuracy": 0.5,
+        "auc": 0.5,
+        "fpr": 1.0,
+        "mcc": 0.0,
+        "precision": 0.5,
+        "tpr": 1.0
+      },
+      "pair_ranking": {
+        "accuracy_with_half_credit_for_ties": 0.5,
+        "losses": 0,
+        "ties": 24,
+        "wins": 0
+      },
+      "pairs": 24,
+      "records": 48
+    }
+  },
+  "rule": {
+    "definition": "Alert when the operation maps to an ATT&CK technique.",
+    "operation_to_technique": {
+      "backup_delete": "T1490",
+      "event_log_clear": "T1685.005",
+      "service_disable": "T1489",
+      "shadow_copy_delete": "T1490"
+    },
+    "parameters_fit": 0,
+    "threshold": 0.5
+  },
+  "schema_version": "rivf-posthoc-attack-operation-rule-v1",
+  "status": "posthoc_descriptive_nonlearning_baseline"
+}
