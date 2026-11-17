@@ -1,0 +1,7 @@
+attack_launcher,legitimate_launcher,WHIT_L,WHIT_A,pairs
+delayed_child,interactive_shell,0000,0000,4
+delayed_child,interactive_shell,1100,0101,4
+delayed_child,interactive_shell,1111,1111,4
+interactive_shell,interactive_shell,0000,0000,4
+interactive_shell,interactive_shell,1100,0101,4
+interactive_shell,interactive_shell,1111,1111,4

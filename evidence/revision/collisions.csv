@@ -1,0 +1,9 @@
+pair_id,operation,launcher,role,WHIT
+ctxv5-p026,backup_delete,interactive_shell,standard,0000
+ctxv5-p044,backup_delete,interactive_shell,standard,1111
+ctxv5-p027,event_log_clear,interactive_shell,standard,1111
+ctxv5-p038,event_log_clear,interactive_shell,standard,0000
+ctxv5-p018,service_disable,interactive_shell,standard,1111
+ctxv5-p035,service_disable,interactive_shell,standard,0000
+ctxv5-p019,shadow_copy_delete,interactive_shell,standard,1111
+ctxv5-p067,shadow_copy_delete,interactive_shell,standard,0000

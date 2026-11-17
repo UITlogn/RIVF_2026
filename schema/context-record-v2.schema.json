@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rivf-context/context-record-v2.schema.json",
+  "title": "Matched administrative-operation record with measured process context",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "record_id", "pair_id", "split", "workload_group",
+    "operation", "label", "account_state_label", "synthetic",
+    "telemetry_equivalent", "quality_eligible", "claim_eligible",
+    "exclusion_reason", "context", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "context-record-v2"},
+    "record_id": {"type": "string", "minLength": 1},
+    "pair_id": {"type": "string", "minLength": 1},
+    "split": {"enum": ["development", "validation", "test"]},
+    "workload_group": {"type": "string", "minLength": 1},
+    "operation": {
+      "enum": [
+        "shadow_copy_delete", "event_log_clear", "service_disable",
+        "backup_delete", "security_tool_stop", "remote_admin_execution"
+      ]
+    },
+    "label": {"enum": ["legitimate_admin", "attack_preparation"]},
+    "account_state_label": {
+      "enum": ["expected_use", "compromised", "not_applicable", "unknown"]
+    },
+    "synthetic": {"type": "boolean"},
+    "telemetry_equivalent": {"type": "boolean"},
+    "quality_eligible": {"type": "boolean"},
+    "claim_eligible": {"type": "boolean"},
+    "exclusion_reason": {"type": ["string", "null"]},
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_signature_status", "launcher_type", "parent_chain_trust",
+        "session_type", "account_role", "target_scope", "host_scope_count",
+        "prior_auth_anomaly_count_10m", "prior_discovery_count_5m",
+        "prior_remote_execution_count_5m",
+        "prior_security_impairment_count_5m", "operation_rate_60s",
+        "seconds_since_session_start", "out_of_hours", "observed_whoami",
+        "observed_hostname", "observed_ipconfig", "observed_tasklist"
+      ],
+      "properties": {
+        "source_signature_status": {"enum": ["trusted", "untrusted", "unknown"]},
+        "launcher_type": {"enum": ["interactive_shell", "remote_management", "service", "scheduler", "delayed_child", "unknown"]},
+        "parent_chain_trust": {"enum": ["high", "mixed", "low", "unknown"]},
+        "session_type": {"enum": ["console", "rdp", "network", "service", "batch", "unknown"]},
+        "account_role": {"enum": ["administrator", "system", "service", "standard", "unknown"]},
+        "target_scope": {"enum": ["local_host", "remote_single", "multi_host", "unknown"]},
+        "host_scope_count": {"type": "integer", "minimum": 1},
+        "prior_auth_anomaly_count_10m": {"type": "integer", "minimum": 0},
+        "prior_discovery_count_5m": {"type": "integer", "minimum": 0},
+        "prior_remote_execution_count_5m": {"type": "integer", "minimum": 0},
+        "prior_security_impairment_count_5m": {"type": "integer", "minimum": 0},
+        "operation_rate_60s": {"type": "number", "minimum": 0},
+        "seconds_since_session_start": {"type": "number", "minimum": 0},
+        "out_of_hours": {"type": "boolean"},
+        "observed_whoami": {"type": "boolean"},
+        "observed_hostname": {"type": "boolean"},
+        "observed_ipconfig": {"type": "boolean"},
+        "observed_tasklist": {"type": "boolean"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capture_profile_id", "source_artifact", "source_artifact_sha256"],
+      "properties": {
+        "capture_profile_id": {"type": "string", "minLength": 1},
+        "source_artifact": {"type": ["string", "null"]},
+        "source_artifact_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"synthetic": {"const": true}}, "required": ["synthetic"]},
+      "then": {"properties": {"claim_eligible": {"const": false}, "exclusion_reason": {"type": "string", "minLength": 1}}}
+    },
+    {
+      "if": {"properties": {"claim_eligible": {"const": true}}, "required": ["claim_eligible"]},
+      "then": {"properties": {"synthetic": {"const": false}, "telemetry_equivalent": {"const": true}, "quality_eligible": {"const": true}, "exclusion_reason": {"const": null}}}
+    }
+  ]
+}

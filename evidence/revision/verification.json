@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "kind": "offline_recomputation_not_new_collection",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "overlap": [
+    {
+      "collection": "development",
+      "records": 48,
+      "pairs": 24,
+      "unique_vectors": 28,
+      "collisions": 8,
+      "joint_multiset_sha256": "eb16133ae9fe3c7b4049a34103060129b93fcc2faf083f31ea41f21968254685",
+      "equals_development": true
+    },
+    {
+      "collection": "validation",
+      "records": 48,
+      "pairs": 24,
+      "unique_vectors": 28,
+      "collisions": 8,
+      "joint_multiset_sha256": "eb16133ae9fe3c7b4049a34103060129b93fcc2faf083f31ea41f21968254685",
+      "equals_development": true
+    },
+    {
+      "collection": "test",
+      "records": 48,
+      "pairs": 24,
+      "unique_vectors": 28,
+      "collisions": 8,
+      "joint_multiset_sha256": "eb16133ae9fe3c7b4049a34103060129b93fcc2faf083f31ea41f21968254685",
+      "equals_development": true
+    },
+    {
+      "collection": "v6",
+      "records": 48,
+      "pairs": 24,
+      "unique_vectors": 28,
+      "collisions": 8,
+      "joint_multiset_sha256": "eb16133ae9fe3c7b4049a34103060129b93fcc2faf083f31ea41f21968254685",
+      "equals_development": true
+    }
+  ],
+  "lookup_diagnostic": {
+    "development": {
+      "tp": 16,
+      "fn": 8,
+      "fp": 0,
+      "tn": 24,
+      "auc": 0.8888888888888888,
+      "wins": 16,
+      "ties": 8,
+      "losses": 0,
+      "pair_rank": 0.8333333333333334,
+      "tpr_ci": [
+        0.4670631683813174,
+        0.8202780967270225
+      ],
+      "fpr_ci": [
+        1.3877787807814457e-17,
+        0.13797620467498017
+      ]
+    },
+    "validation": {
+      "tp": 16,
+      "fn": 8,
+      "fp": 0,
+      "tn": 24,
+      "auc": 0.8888888888888888,
+      "wins": 16,
+      "ties": 8,
+      "losses": 0,
+      "pair_rank": 0.8333333333333334,
+      "tpr_ci": [
+        0.4670631683813174,
+        0.8202780967270225
+      ],
+      "fpr_ci": [
+        1.3877787807814457e-17,
+        0.13797620467498017
+      ]
+    },
+    "test": {
+      "tp": 16,
+      "fn": 8,
+      "fp": 0,
+      "tn": 24,
+      "auc": 0.8888888888888888,
+      "wins": 16,
+      "ties": 8,
+      "losses": 0,
+      "pair_rank": 0.8333333333333334,
+      "tpr_ci": [
+        0.4670631683813174,
+        0.8202780967270225
+      ],
+      "fpr_ci": [
+        1.3877787807814457e-17,
+        0.13797620467498017
+      ]
+    },
+    "v6": {
+      "tp": 16,
+      "fn": 8,
+      "fp": 0,
+      "tn": 24,
+      "auc": 0.8888888888888888,
+      "wins": 16,
+      "ties": 8,
+      "losses": 0,
+      "pair_rank": 0.8333333333333334,
+      "tpr_ci": [
+        0.4670631683813174,
+        0.8202780967270225
+      ],
+      "fpr_ci": [
+        1.3877787807814457e-17,
+        0.13797620467498017
+      ]
+    }
+  },
+  "primary_test": {
+    "collection": "test",
+    "model": "measured_process_context",
+    "tp": 16,
+    "fn": 8,
+    "fp": 0,
+    "tn": 24,
+    "auc": 0.8888888888888888,
+    "wins": 16,
+    "ties": 8,
+    "losses": 0,
+    "pair_rank": 0.8333333333333334,
+    "tpr_ci": [
+      0.4670631683813174,
+      0.8202780967270225
+    ],
+    "fpr_ci": [
+      1.3877787807814457e-17,
+      0.13797620467498017
+    ]
+  },
+  "pair_rank_ceiling": 0.8333333333333334,
+  "input_hashes": {
+    "data/complete-pairs-measured-claim-v2.jsonl": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e",
+    "data/complete-pairs-temporal-replication-v6.jsonl": "3916383216b654f31d6c5f66f3ef14190c6d76b841141a1a8b677118391c7899",
+    "scores/v5-logistic-predictions.csv": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2",
+    "scores/v6-locked-predictions.csv": "c8bbb3fa53f44ede88c1dd55cd5371b4b7c4bd885faa3bf5514fbdb097c56b26",
+    "reports/v5-model-artifacts.json": "b7c198bd01113e3226b3efbb43535199beff654928c5b8f38153fa152fd58cd7"
+  }
+}

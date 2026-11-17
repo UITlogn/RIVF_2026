@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "schematic": {
+    "batch_pairs": 12,
+    "direct_pairs": 12,
+    "direct_exact_L2_collisions": 8,
+    "direct_discovery_differences": 4,
+    "pairs_per_operation": {
+      "backup_delete": 6,
+      "service_disable": 6,
+      "event_log_clear": 6,
+      "shadow_copy_delete": 6
+    }
+  },
+  "roc": {
+    "operation_only": {
+      "records": 48,
+      "coordinate_count": 2,
+      "auc": 0.5,
+      "matches_exported_coordinates": true
+    },
+    "measured_process_context": {
+      "records": 48,
+      "coordinate_count": 6,
+      "auc": 0.8888888888888888,
+      "matches_exported_coordinates": true
+    },
+    "random_forest": {
+      "records": 48,
+      "coordinate_count": 29,
+      "auc": 0.8888888888888888,
+      "matches_exported_coordinates": true
+    }
+  },
+  "scope": "historical v5 test partition; no new captures",
+  "inputs": {
+    "data/complete-pairs-measured-claim-v2.jsonl": "057db4db12e3cb717fda5842d205234ed4d9344ba0e7d27a06ac5460dc1ebd8e",
+    "scores/v5-logistic-predictions.csv": "4b7d2cd4bfe3bdb67cae01559d0eed2992fae8242362d1c129fb9b43b8ac4ba2",
+    "scores/random-forest-predictions.csv": "157778d31f1e83efee51fc8f2faa202c82861d2ef3ce9af71175c8cb40543e95",
+    "evidence/roc-points.csv": "037e898d25bc6f4879ee2f2a8cf62c47a80ae027bf27ff4f3e14f7210f73ea41"
+  }
+}

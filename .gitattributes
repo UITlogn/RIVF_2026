@@ -1,0 +1,2 @@
+# Preserve exact artifact bytes and accept historical CRLF line endings.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

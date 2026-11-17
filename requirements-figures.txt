@@ -1,0 +1,2 @@
+# Optional: the primary numerical audit and logistic refit use only Python stdlib.
+matplotlib==3.11.2
